@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#root{
+    display: flex;
+    justify-content: center;
+}
+.App{
+    width: 800px;
+}
+.note{
+    display: flex;
+    padding: 15px;
+    border: 2px solid mediumpurple;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+.note__content{
+    color: grey;
+}
+.note-enter {
+    opacity: 0; /*при внесении поста из-за 0 не видно анимации*/
+    transform: translateX(-350px);
+}
+.note-enter-active { /*выезжающая анимация*/
+    transform: translateX(450px);
+    /*transition: opacity 700ms ease-in;*/
+    opacity: 1;
+    transition: all 700ms ease-in;
+}
+.note-exit {
+    opacity: 1;
+}
+.note-exit-active { /*выезжающая анимация*/
+    transform: translateX(-450px);
+    transition: all 800ms ease-in;
+    opacity: 0;
+    /*transition: opacity 700ms ease-in;*/
+}
+.note-form{
+    margin-top: 20px;
+    background-color: white;
+}
+p{
+    font-size: 14px;
+    color: mediumpurple;
+}
+.filter{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
